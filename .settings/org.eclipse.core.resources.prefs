@@ -1,0 +1,22 @@
+eclipse.preferences.version=1
+<<<<<<< HEAD
+<<<<<<< HEAD
+encoding//src/main/java/trasua/Controller/Admin/LoginAdminController.java=UTF-8
+=======
+encoding//src/main/java/trasua/Controller/Admin/HomeAdminController.java=UTF-8
+>>>>>>> a53b70b1bab7fca8a0877ea7db285dfe9314f6b5
+=======
+encoding//src/main/java/trasua/Controller/Admin/HomeAdminController.java=UTF-8
+=======
+encoding//src/main/java/trasua/Controller/Admin/LoginAdminController.java=UTF-8
+>>>>>>> 247e44826f0f1bc979512b7b35990127664e40cf
+>>>>>>> e4e4df78e6efb447fca7ef52208f2766b503a7c7
+encoding//src/main/java/trasua/Controller/User/UserController.java=UTF-8
+<<<<<<< HEAD
+<<<<<<< HEAD
+encoding//src/main/java/trasua/Controller/User/giohangController.java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/user/Login.jsp=UTF-8
+=======
+>>>>>>> c7b8b054995cd8f2dc60b42b86e731b4653b4577
+=======
+>>>>>>> 85f30fd83e0e2974f2ee87b751d0e01e9330bbf6
