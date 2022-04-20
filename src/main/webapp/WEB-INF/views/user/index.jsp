@@ -14,9 +14,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> Live Dinner Restaurant</strong></h1>
-							<p class="m-b-40">See how your users experience your website in realtime or view  <br> 
-							trends to see any changes in performance over time.</p>
+							<h1 class="m-b-20"><strong>Chào mừng <br> đến với CHNM</strong></h1>
+									<p class="m-b-40">BẠN CÓ MUỐN THỬ MỘT CHÚT <br>
+										HƯƠNG VỊ CỦA SỰ SAY MÊ.</p>
 							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
 						</div>
 					</div>
@@ -27,9 +27,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> Live Dinner Restaurant</strong></h1>
-							<p class="m-b-40">See how your users experience your website in realtime or view  <br> 
-							trends to see any changes in performance over time.</p>
+								<h1 class="m-b-20"><strong>Chào mừng <br> đến với CHNM</strong></h1>
+								<p class="m-b-40">Dăm ba cây kẹo mút  <br>
+								sao có sức hút bằng CHNM.</p>
 							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
 						</div>
 					</div>
@@ -40,9 +40,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> Yamifood Restaurant</strong></h1>
-							<p class="m-b-40">See how your users experience your website in realtime or view  <br> 
-							trends to see any changes in performance over time.</p>
+							<h1 class="m-b-20"><strong>Chào mừng <br> đến với CHNM</strong></h1>
+						<p class="m-b-40">CHNM - Quán ăn ONLINE ship đồ về tận nơi bạn ở, một hình thức tiện lợi
+							cho những tín đồ ăn đam mê ăn uống <br>
+							nhưng lại không muốn đi ra ngoài vì ngại đường xa
+							hoặc không tìm được quán ưng ý.</p>
 							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
 						</div>
 					</div>
@@ -62,10 +64,13 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
 					<div class="inner-column">
-						<h1>Welcome To <span>Live Dinner Restaurant</span></h1>
-						<h4>Little Story</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
-						<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.</p>
+						<h1>Đến với <span>CHNM</span></h1>
+					<p style="font-weight: bold ;color:black" >MENU quán vô cùng phong phú với các món ăn hấp dẫn</p>
+						<p style="font-weight: bold ;color: black">được chế biến bởi đầu bếp
+							chuyên đồ Hàn. Thực phẩm được chọn lựa cẩn thận, đảm bảo an toàn từ khâu chế biến
+							lẫn đóng gói, để bạn có thể yên tâm thưởng thức ngay khi nhận.</p>
+							<p style="font-weight: bold ;color: black">Bên cạnh đồ ăn ngon chất lượng, CHNM còn thỏa măn ví tiền của bạn với
+							giá cả "hạt rẻ" bất ngờ, giúp bạn ăn uống thỏa thích mà không lo đau ví.</p>
 						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a>
 					</div>
 				</div>
@@ -83,9 +88,10 @@
 			<div class="row">
 				<div class="col-md-8 ml-auto mr-auto text-center">
 					<p class="lead ">
-						" If you're not the one cooking, stay out of the way and compliment the chef. "
+						 Với CHNM, bạn chỉ cần nằm nhà đặt đồ là có ngay món ngon giá rẻ để lấp đầy chiếc bụng
+						đói của mình rồi.
 					</p>
-					<span class="lead">Michael Strahan</span>
+					<span class="lead">CHNM</span>
 				</div>
 			</div>
 		</div>
@@ -384,60 +390,4 @@
 		</div>
 	</div>
 	<!-- End Gallery -->
-	
-	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Customer Reviews</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="<c:url value="/template/templateUser/images/quotations-button.png"/>" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Paul Mitchel</strong></h5>
-								<h6 class="text-dark m-0">Web Developer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="<c:url value="/template/templateUser/images/quotations-button.png"/>" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Steve Fonsi</strong></h5>
-								<h6 class="text-dark m-0">Web Designer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="<c:url value="/template/templateUser/images/quotations-button.png"/>" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel vebar</strong></h5>
-								<h6 class="text-dark m-0">Seo Analyst</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
-                    </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Customer Reviews -->
-	
 	

@@ -26,7 +26,7 @@
 					<h2>Chi tiết giỏ hàng</h2>
 				</div>
 				<div class="col-12">
-					<a href="">Trang chủ</a> <a href="">sản phẩm</a>
+					<a href="index">Trang chủ</a> <a href="menu">sản phẩm</a>
 				</div>
 			</div>
 		</div>
@@ -84,7 +84,7 @@
 			</tbody>
 			<tfoot>
 				<tr>
-					<td><a href="trang-chu" class="btn btn-warning"><i
+					<td><a href="menu" class="btn btn-warning"><i
 							class="fa fa-angle-left"></i> Tiếp tục mua</a></td>
 					<td colspan="2" class="hidden-xs"></td>
 					<td class="hidden-xs text-center" style="margin-right: 5px;"><strong>Tổng: <span >${ TotalPriceCart }đ</span></strong></td>
@@ -101,7 +101,7 @@
     $(".edit-cart").on("click", function(){
         var id = $(this).data("id");
         var quanty = $("#quanty-cart-"+id).val();
-        alert(quanty);
+        alert("thay đổi số lượng thành: "  +quanty);
         window.location = "editCart/"+id+"/"+quanty;
     });
 </script>

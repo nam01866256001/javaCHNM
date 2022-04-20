@@ -20,13 +20,13 @@ public class hoadonServiceImpl implements IhoadonService{
 		return hdDao.addhoadon(bill);
 	}
 	
-	public void addcthd(HashMap<Long, giohang> carts) {
+	public void addcthd(HashMap<Long, giohang> cart) {
 		int maHoaDon = hdDao.GetIDLastBills();
-		for (Map.Entry<Long, giohang> itemCart : carts.entrySet()) {
+		for (Map.Entry<Long, giohang> itemCart : cart.entrySet()) {
 			cthd ct= new cthd();
 			ct.setMaHoaDon(maHoaDon);
-			  ct.setMaSanPham(itemCart.getValue().getProduct().getMaSanPham());
-				  ct.setGiaBan(itemCart.getValue().getQuanty());
+			  ct.setTenSanPham(itemCart.getValue().getProduct().getTenSanPham());
+				  ct.setSoLuong(itemCart.getValue().getQuanty());
 			  ct.setThanhTien(itemCart.getValue().getTotal());
 			  hdDao.addcthd(ct);
 		}

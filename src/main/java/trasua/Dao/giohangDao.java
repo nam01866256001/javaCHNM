@@ -14,11 +14,11 @@ public class giohangDao extends BaseDao {
 	@Autowired
 	sanphamDao SanphamDao = new sanphamDao();
 
-	public HashMap<Long, giohang> addCart(long id, HashMap<Long, giohang> gh) {
+	public HashMap<Long, giohang> addCart(long id, HashMap<Long, giohang> giohang) {
 		giohang itemCart = new giohang();
 		sanpham SP = SanphamDao.FindProductByID(id);
-		if (SP != null && gh.containsKey(id)) {
-			itemCart = gh.get(id);
+		if (SP != null && giohang.containsKey(id)) {
+			itemCart = giohang.get(id);
 			itemCart.setQuanty(itemCart.getQuanty() + 1);
 			itemCart.setTotal(itemCart.getQuanty() * itemCart.getProduct().getGiaBan());
 		}
@@ -27,48 +27,48 @@ public class giohangDao extends BaseDao {
 			itemCart.setQuanty(1);
 			itemCart.setTotal(SP.getGiaBan());
 		}
-		gh.put(id, itemCart);
-		return gh;
+		giohang.put(id, itemCart);
+		return giohang;
 	}
 
-	public HashMap<Long, giohang> editCart(long id, int quanty, HashMap<Long, giohang> gh) {
-		if (gh == null) {
-			return gh;
+	public HashMap<Long, giohang> editCart(long id, int quanty, HashMap<Long, giohang> giohang) {
+		if (giohang == null) {
+			return giohang;
 		}
 		giohang itemCart = new giohang();
 		sanpham SP = SanphamDao.FindProductByID(id);
-		if (gh.containsKey(id)) {
-			itemCart = gh.get(id);
+		if (giohang.containsKey(id)) {
+			itemCart = giohang.get(id);
 			itemCart.setQuanty(1);
 			itemCart.setQuanty(quanty);
 			float total = quanty * itemCart.getProduct().getGiaBan();
 			itemCart.setTotal(total);
 		}
-		gh.put(id, itemCart);
-		return gh;
+		giohang.put(id, itemCart);
+		return giohang;
 	}
 
-	public HashMap<Long, giohang> deleteCart(long id, HashMap<Long, giohang> gh) {
-		if (gh == null) {
-			return gh;
+	public HashMap<Long, giohang> deleteCart(long id, HashMap<Long, giohang> giohang) {
+		if (giohang == null) {
+			return giohang;
 		}
-		if (gh.containsKey(id)) {
-			gh.remove(id);
+		if (giohang.containsKey(id)) {
+			giohang.remove(id);
 		}
-		return gh;
+		return giohang;
 	}
 
-	public int TotalQuanty(HashMap<Long, giohang> gh) {
+	public int TotalQuanty(HashMap<Long, giohang> giohang) {
 		int totalQuanty = 0;
-		for (Map.Entry<Long, giohang> itemCart : gh.entrySet()) {
+		for (Map.Entry<Long, giohang> itemCart : giohang.entrySet()) {
 			totalQuanty += itemCart.getValue().getQuanty();
 		}
 		return totalQuanty;
 	}
 
-	public float TotalPrice(HashMap<Long, giohang> gh) {
+	public float TotalPrice(HashMap<Long, giohang> giohang) {
 		float TotalPrice = 0;
-		for (Map.Entry<Long, giohang> itemCart : gh.entrySet()) {
+		for (Map.Entry<Long, giohang> itemCart : giohang.entrySet()) {
 			TotalPrice += itemCart.getValue().getTotal();
 		}
 		return TotalPrice;

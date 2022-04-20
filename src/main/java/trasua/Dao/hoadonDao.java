@@ -11,23 +11,33 @@ import trasua.Entity.hoadon;
 @Repository
 public class hoadonDao extends BaseDao {
 	public int addhoadon(hoadon bill) {
+//		StringBuffer sql = new StringBuffer();
+//		sql.append("INSERT INTO hoadon");
+//		sql.append("( ");
+//		sql.append("`maHoaDon`, `email`, `tenNguoiMua`, `sdt`, `diaChi`, `ghiChu`,`ngayMua`, `soLuong`, `tongTien`");
+//		sql.append(") ");
+//		sql.append("VALUES ");
+//		sql.append("( ");
+//		sql.append("	'" + "NULL" + "', ");	
+//		sql.append("	'" + bill.getEmail() + "', ");
+//		sql.append("	'" + bill.getTenNguoiMua() + "', ");
+//		sql.append("	'" + bill.getSdt() + "', ");
+//		sql.append("	'" + bill.getDiaChi() + "', ");
+//		sql.append("	'" + bill.getGhiChu() + "', ");
+//		sql.append("	'" + "2022"+ "', ");
+//		sql.append("	'" + "1" + "', ");
+//		sql.append("	'" + "1" + "'");
+//		sql.append(");");
 		StringBuffer sql = new StringBuffer();
-		sql.append("INSERT INTO hoadon");
+		sql.append("INSERT INTO hoadon ");
 		sql.append("( ");
-		sql.append("`maHoaDon`, `email`, `tenNguoiMua`, `sdt`, `diaChi`, `ghiChu`,`ngayMua`, `soLuong`, `tongTien`");
+		sql.append("`email`, `tenNguoiMua`, `sdt`, `diaChi`, `ghiChu` ");
 		sql.append(") ");
 		sql.append("VALUES ");
 		sql.append("( ");
-		sql.append("	'" + "NULL" + "', ");	
-		sql.append("	'" + bill.getEmail() + "', ");
-		sql.append("	'" + bill.getTenNguoiMua() + "', ");
-		sql.append("	'" + bill.getSdt() + "', ");
-		sql.append("	'" + bill.getDiaChi() + "', ");
-		sql.append("	'" + bill.getGhiChu() + "', ");
-		sql.append("	'" + "2022"+ "', ");
-		sql.append("	'" + "1" + "', ");
-		sql.append("	'" + "1" + "'");
-		sql.append(");");
+		sql.append("'" + bill.getEmail() + "', '" + bill.getTenNguoiMua() + "', '" + bill.getSdt() + "', '"
+				+ bill.getDiaChi() + "', '" + bill.getGhiChu() + "' ");
+		sql.append(") ");
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
 	};
@@ -39,7 +49,7 @@ public class hoadonDao extends BaseDao {
 
 	public int GetIDLastBills() {
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT MAX(id) FROM hoadon;");
+		sql.append("SELECT MAX(maHoaDon) FROM hoadon;");
 		Integer id = _jdbcTemplate.queryForObject(sql.toString(), new Object[] {}, 
 				Integer.class);
 		return id;
@@ -50,7 +60,7 @@ public class hoadonDao extends BaseDao {
 		sql.append("INSERT INTO cthd ");
 		sql.append("( ");
 		sql.append("	maCT,");
-		sql.append("	maSanPham,");
+		sql.append("	tenSanPham,");
 		sql.append("	maHoaDon,");
 		sql.append("	soLuong,");
 		sql.append("	giaBan,");

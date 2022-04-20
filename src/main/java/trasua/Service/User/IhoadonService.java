@@ -11,5 +11,5 @@ import trasua.Entity.hoadon;
 public interface IhoadonService {
 	public int addhoadon (hoadon bill);
 	
-	public void addcthd (HashMap<Long, giohang> giohang);
+	public void addcthd (HashMap<Long, giohang> cart);
 }

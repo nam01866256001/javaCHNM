@@ -110,8 +110,8 @@ public class giohangController extends BaseController {
 		 // bill.setQuanty((int)session.getAttribute("TotalPriceCart")); 
 		  //bill.setTotal((float)session.getAttribute("TotalQuantyCart")); 
 		  if (hoadonService.addhoadon(bill) > 0) {
-			  HashMap<Long, giohang> cart = (HashMap<Long, giohang>) session.getAttribute("cart");
-			  hoadonService.addcthd(cart);
+			  HashMap<Long, giohang> giohang = (HashMap<Long, giohang>) session.getAttribute("cart");
+			  hoadonService.addcthd(giohang);
 		  }
 		  session.removeAttribute("cart");
 		  return "redirect:index";
