@@ -22,13 +22,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="chitiethoadon">
+                            <a class="nav-link" href="">
                                 <i class="ni ni-bullet-list-67 text-default"></i>
-                                <span class="nav-link-text">Quản lý CTHD</span>
+                                <span class="nav-link-text">Quản lý đơn hàng</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="hoadon">
+                            <a class="nav-link" href="">
                                 <i class="ni ni-album-2 text-default"></i>
                                 <span class="nav-link-text">Quản lý hóa đơn</span>
                             </a>
@@ -55,10 +55,21 @@
                         <li class="nav-item">
                             <a class="nav-link" href="taikhoan-admin">
                                 <i class="ni ni-circle-08 text-pink"></i>
-                                <span class="nav-link-text">Admin</span>
+                                <span class="nav-link-text">Nhân viên</span>
                             </a>
                         </li>
-                      
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="ni ni-key-25 text-yellow"></i>
+                                <span class="nav-link-text">Kích hoạt</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="ni ni-key-25 text-black-50"></i>
+                                <span class="nav-link-text">Phân quyền</span>
+                            </a>
+                        </li>
 
                     </ul >
                    

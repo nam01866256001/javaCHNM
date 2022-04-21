@@ -9,7 +9,7 @@ import trasua.Entity.Mapper;
 import trasua.Entity.sanpham;
 
 @Repository
-public class sanphamDao extends BaseDao {
+public class loaisanphamDao extends BaseDao {
 
 	private StringBuffer SqlString() {
 		StringBuffer sql = new StringBuffer();
@@ -36,39 +36,12 @@ public class sanphamDao extends BaseDao {
 		list = _jdbcTemplate.query(sql, new Mapper());
 		return list;
 	}
-
-	public List<sanpham> GetProduct6new(){
-		List<sanpham> list = new ArrayList<sanpham>();
-		String sql = "SELECT * FROM sanpham order by maSanPham desc limit 6";
-		list = _jdbcTemplate.query(sql, new Mapper());
-		return list;
-	} 
 	
 	public sanpham FindProductByID(long id) {
 		String sql = SqlProductByID(id);
 		sanpham SP = _jdbcTemplate.queryForObject(sql, new Mapper());
 		return SP;
 	}
-	private String SqlProductByc(long id) {
-		StringBuffer sql = SqlString();
-		sql.append("WHERE maLoaiSanPham = " + id + "");
-		return sql.toString();
-	}
-
-	public List<sanpham> GetProductByc(long id) {
-		String sql = SqlProductByc(id);
-		List<sanpham> list = new ArrayList<sanpham>();
-		list = _jdbcTemplate.query(sql, new Mapper());
-		return list;
-	}
-	
-	public sanpham FindProductByc(long id) {
-		String sql = SqlProductByc(id);
-		sanpham SP = _jdbcTemplate.queryForObject(sql, new Mapper());
-		return SP;
-	}
-	
-	
 	private String SqlProductsPaginate(int start, int limit) {
 		String sql = SqlString() + " limit " + start + "," + limit;
 		return sql;
@@ -80,5 +53,4 @@ public class sanphamDao extends BaseDao {
 
 		return list;
 	}
-	
 }

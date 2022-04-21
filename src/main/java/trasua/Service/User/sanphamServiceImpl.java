@@ -17,5 +17,19 @@ public class sanphamServiceImpl implements IsanphamService{
 		 List<sanpham> list= sanphamDao.GetProductByID(id);
 	    return list.get(0);
 	}
+	public List<sanpham> GetProductByc(long id) {
+		 List<sanpham> list= sanphamDao.GetProductByc(id);
+	    return list;
+	}
+
+	public List<sanpham> GetDataProductsPaginate(int start, int totalPage) {
+		// TODO Auto-generated method stub
+		return sanphamDao.GetDataProductsPaginate(start, totalPage);
+	}
+	@Override
+	public List<sanpham> GetProduct6new() {
+		 List<sanpham> list= sanphamDao.GetProduct6new();
+		    return list;
+	}
 	
 }

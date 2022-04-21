@@ -79,9 +79,9 @@
                                   
                                   
                                     <td class="text-right">
-                                     
-                                        <a href="<c:url value="/admin/suasanpham/${item.maSanPham}"/>" class="btn btn-sm btn-neutral"><i class="fas fa-edit"></i></a>
-                                        <a href="<c:url value="/admin/xoasanpham/${item.maSanPham}"/>" class="btn btn-sm btn-neutral"><i class="fas fa-minus-circle"></i></a>
+                                        <a href="@Url.Action("Details","Product",new { id= @i.maSP })" class="btn btn-sm btn-neutral"><i class="fas fa-eye"></i></a>
+                                        <a href="@Url.Action("Edit","Product",new { id= @i.maSP })" class="btn btn-sm btn-neutral"><i class="fas fa-edit"></i></a>
+                                        <a href="@Url.Action("Delete","Product",new { id= @i.maSP })" class="btn btn-sm btn-neutral"><i class="fas fa-minus-circle"></i></a>
 
                                     </td>
                                 </tr>

@@ -14,9 +14,9 @@ public class Mappercthd implements RowMapper<cthd> {
 		cthd.setMaCT(rs.getInt("maCT"));
 		cthd.setMaHoaDon(rs.getInt("maHoaDon"));
 		cthd.setTenSanPham(rs.getString("tenSanPham"));
-		cthd.setGiaBan(rs.getInt("giaBan"));
-		cthd.setSoLuong(rs.getLong("soLuong"));
-		cthd.setThanhTien(rs.getFloat("thanhTien"));
+		cthd.setQuanty(rs.getInt("quanty"));
+		cthd.setTotal(rs.getFloat("total"));
+		cthd.setTotal(rs.getFloat("thanhTien"));
 		return cthd;
 	}
 }

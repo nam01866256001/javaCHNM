@@ -49,9 +49,6 @@
 						<!-- <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
 							href="#v-pills-profile" role="tab"
 							aria-controls="v-pills-profile" aria-selected="false">Drinks</a>
-						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
-							href="#v-pills-messages" role="tab"
-							aria-controls="v-pills-messages" aria-selected="false">Lunch</a>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
 							href="#v-pills-settings" role="tab"
 							aria-controls="v-pills-settings" aria-selected="false">Dinner</a> -->
@@ -63,7 +60,7 @@
 						<div class="tab-pane fade show active" id="v-pills-home"
 							role="tabpanel" aria-labelledby="v-pills-home-tab">
 							<div class="row">
-								<c:forEach var="item" items="${ ProductsPaginate }">
+								<c:forEach var="item" items="${sanpham1}">
 									<div class="col-lg-4 col-md-6 special-grid drinks">
 										<div class="gallery-single fix">
 										
@@ -73,7 +70,7 @@
 											<div class="why-text">
 												<h4>${item.tenSanPham}</h4>
 												<h5>${item.giaBan}</h5>
-												<a href="/trasua/ProductDetail/${item.maSanPham}"><button
+												<a href="chi-tiet-sp/${item.maSanPham}"><button
 														style="color: white; background-color: #D65106; border-color: #D65106;">Chi
 														tiết sản phẩm</button></a>
 												<a href="/trasua/addCart/${item.maSanPham}"><button
@@ -87,36 +84,9 @@
 					</div>
 				</div>
 			</div>
-			
-	<div class="shop_pagination_area wow fadeInUp">
-							<nav aria-label="Page navigation">
-								<c:if test="${ (ProductsPaginate) != null }">
-									<ul class="pagination pagination-sm">
-
-										<li class="page-item"><a class="page-link"
-											href="<c:url value='/menu/page=1'/>">&laquo;</a> <c:forEach
-												var="item" begin="1" end="${ paginateInfo.totalPage }"
-												varStatus="loop">
-												<c:if test="${ (loop.index) == paginateInfo.currentPage }">
-													<li class="page-item active"><a class="page-link"
-														href="<c:url value='/menu/page=${ loop.index }'/>">${ loop.index }</a></li>
-												</c:if>
-												<c:if test="${ (loop.index) != paginateInfo.currentPage }">
-													<li class="page-item"><a class="page-link"
-														href="<c:url value='/menu/page=${ loop.index }'/>">${ loop.index }</a></li>
-												</c:if>
-											</c:forEach>
-										<li class="page-item"><a class="page-link"
-											href="<c:url value='/menu/page=${ paginateInfo.totalPage }'/>">&raquo;</a></li>
-
-									</ul>
-								</c:if>
-
-							</nav>
-						</div>
 		</div>
 	</div>
-	
+	</div>
 	<!-- End Menu -->
 
 	<!-- Start QT -->

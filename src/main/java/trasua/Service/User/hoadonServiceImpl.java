@@ -20,18 +20,20 @@ public class hoadonServiceImpl implements IhoadonService{
 		return hdDao.addhoadon(bill);
 	}
 	
-	public void addcthd(HashMap<Long, giohang> cart) {
+	public void addcthd(HashMap<Long, giohang> giohang) {
 		int maHoaDon = hdDao.GetIDLastBills();
-		for (Map.Entry<Long, giohang> itemCart : cart.entrySet()) {
+		for (Map.Entry<Long, giohang> itemCart : giohang.entrySet()) {
 			cthd ct= new cthd();
-			ct.setMaHoaDon(maHoaDon);
+			  ct.setMaHoaDon(maHoaDon);
 			  ct.setTenSanPham(itemCart.getValue().getProduct().getTenSanPham());
-				  ct.setSoLuong(itemCart.getValue().getQuanty());
+			  ct.setQuanty(itemCart.getValue().getQuanty());
+			  ct.setTotal(itemCart.getValue().getProduct().getGiaBan());
 			  ct.setThanhTien(itemCart.getValue().getTotal());
 			  hdDao.addcthd(ct);
 		}
 	   
 	}
+
 }
 
 

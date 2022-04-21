@@ -23,17 +23,13 @@
 		<form:hidden path="maSanPham" />
 		<!-- Text input-->
 		<div class="form-group">
-			<label class="control-label">Loại sản phẩm <sup>*</sup></label>
-					
-						<div class="controls">
-							<form:select path="maLoaiSanPham">
-								<form:option value="1">Trà sữa</form:option>
-								<form:option value="3">Trà trái cây</form:option>
-								<form:option value="5">Machiato</form:option>
-								<form:option value="6">Đồ ăn nhanh</form:option>
-								
-							</form:select>
-						</div>
+			<label class="col-md-4 control-label" for="product_name">Mã
+				loại sản phẩm</label>
+			<div class="col-md-4">
+				<form:input id="product_name" name="product_name" placeholder=""
+					class="form-control input-md" required="" type="text"
+					path="maLoaiSanPham" />
+			</div>
 		</div>
 
 		<!-- Text input-->

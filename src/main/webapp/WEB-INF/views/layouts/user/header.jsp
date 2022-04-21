@@ -18,11 +18,11 @@
 			<div class="collapse navbar-collapse" id="navbars-rs-food">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link"
-						href="trang-chu">Trang chủ</a></li>
+						href="/trasua/trang-chu">Trang chủ</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="<c:url value="menu"/>">Thực đơn</a></li>
+						href="/trasua/menu">Thực đơn</a></li>
 				</ul>
-				<a href="cart" class="nav-item nav-link">
+				<a href="/trasua/cart" class="nav-item nav-link">
                         <i class="fas fa-shopping-cart"></i>
                        <span
               class="icon-shopping-cart"></span> ${ TotalQuantyCart } Sản phẩm - <span

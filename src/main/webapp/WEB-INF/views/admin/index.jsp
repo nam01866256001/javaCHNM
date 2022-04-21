@@ -35,7 +35,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Sản phẩm</span>
-                                        <span class="h3 font-bold mb-0"></span>
+                                        <span class="h3 font-bold mb-0">215</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-success text-white text-lg rounded-circle">
@@ -58,7 +58,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Khách hàng</span>
-                                        <span class="h3 font-bold mb-0"></span>
+                                        <span class="h3 font-bold mb-0">215</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
@@ -81,7 +81,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Đơn hàng</span>
-                                        <span class="h3 font-bold mb-0"></span>
+                                        <span class="h3 font-bold mb-0">1.400</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
@@ -104,7 +104,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nhân viên</span>
-                                        <span class="h3 font-bold mb-0"></span>
+                                        <span class="h3 font-bold mb-0">95%</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">

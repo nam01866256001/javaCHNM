@@ -15,9 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 import trasua.Entity.taikhoan;
 import trasua.Entity.sanpham;
 import trasua.Service.Admin.AccServiceImpl;
-
 import trasua.Service.Admin.HomeAdminServiceImpl;
-
+import trasua.Service.User.AccountServiceImpl;
 import trasua.Service.User.HomeServiceImpl;
 
 @Controller
@@ -29,9 +28,7 @@ public class HomeAdminController extends BaseAdminController {
 	HomeAdminServiceImpl homeadminService= new HomeAdminServiceImpl();
 	@Autowired
 	AccServiceImpl accService= new AccServiceImpl();
-	@Autowired
 
-	
 	@RequestMapping(value = {"/admin"})
 	public ModelAndView Index() {
 		ModelAndView mv = new ModelAndView("admin/index");
@@ -65,7 +62,6 @@ public class HomeAdminController extends BaseAdminController {
 		mv.addObject("loaisanpham", homeService.GetDataloaiSP());
 		return mv;
 	}
-
 	
 	@RequestMapping(value = {"/admin/themsanpham"})
 	public ModelAndView trangthemsanpham() {
@@ -101,7 +97,7 @@ public class HomeAdminController extends BaseAdminController {
 	}
 	@RequestMapping(value = "admin/suasanpham/{id}", method = RequestMethod.POST)
 	public String editProduct(HttpServletRequest request, HttpSession session,
-			@ModelAttribute("sanpham") sanpham sp, @PathVariable("id") long idProduct) {
+			@ModelAttribute("products") sanpham sp, @PathVariable("id") long idProduct) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("admin/EditProduct");
 		homeadminService.edit(sp, idProduct);

@@ -89,57 +89,61 @@ public class giohangController extends BaseController {
 		return "redirect:" + request.getHeader("Referer");
 	}
 
-	@RequestMapping(value = "checkout", method = RequestMethod.GET)
+	@RequestMapping(value = "/checkout", method = RequestMethod.GET)
 	public ModelAndView Checkout(HttpServletRequest request, HttpSession session) {
 		_mvShare.setViewName("user/checkout");
-		hoadon hoadon = new hoadon();
-		taikhoan loginInfo = (taikhoan) session.getAttribute("LoginInfo");
+		hoadon bill = new hoadon();
+		taikhoan loginInfo = (taikhoan) session.getAttribute("LoginInfor");
+		HashMap<Long, giohang> cart = (HashMap<Long, giohang>) session.getAttribute("giohang");
 		if (loginInfo != null) {
-			hoadon.setDiaChi(loginInfo.getDiaChi());
-			hoadon.setTenNguoiMua(loginInfo.getTenNguoiDung());
-			hoadon.setSdt(loginInfo.getSdt());
-
+			if(cart != null) {
+				bill.setDiaChi(loginInfo.getDiaChi());
+				bill.setSdt(loginInfo.getSdt());
+				bill.setEmail(loginInfo.getEmail());
+				bill.setTongTien((Double) session.getAttribute("TotalPriceCart")); 
+				_mvShare.addObject("nameCustomer",loginInfo.getTenNguoiDung());
+				_mvShare.addObject("bill", bill);
+				return _mvShare;
+			} else {
+				_mvShare.setViewName("redirect:/menu");
+				return _mvShare;
+			}
+			
+		} else {
+			
+			_mvShare.setViewName("redirect:/login");
+			return _mvShare;
 		}
-		_mvShare.addObject("hoadon", hoadon);
-		return _mvShare;
+
 	}
 
-	@RequestMapping(value = "checkout", method = RequestMethod.POST)
-	public String CheckOutBill(HttpServletRequest request, HttpSession session,
-			@ModelAttribute("hoadon") hoadon bill) {
-		 // bill.setQuanty((int)session.getAttribute("TotalPriceCart")); 
-		  //bill.setTotal((float)session.getAttribute("TotalQuantyCart")); 
-		  if (hoadonService.addhoadon(bill) > 0) {
-			  HashMap<Long, giohang> giohang = (HashMap<Long, giohang>) session.getAttribute("cart");
-			  hoadonService.addcthd(giohang);
-		  }
-		  session.removeAttribute("cart");
-		  return "redirect:index";
-			/*
-			 * _mvShare.setViewName("user/index"); return _mvShare;
-			 */
-		  }
-		 
-		
-			/*if (bill.getNgayMua() == "" || bill.getEmail() == "" || bill.getSdt() == "" || bill.getDiaChi() == "") {
-				_mvShare.addObject("statusCheckout", "Thanh toán thất bại!!!");
-				_mvShare.setViewName("user/index");
-			} else {
-				bill.setQuanty((int) session.getAttribute("TotalPriceCart"));
-				bill.setTotal((float) session.getAttribute("TotalQuantyCart"));
-				HashMap<Long, giohang> cart = (HashMap<Long, giohang>) session.getAttribute("cart");
-				if (hoadonService.addhoadon(bill) > 0) {
-					if (cart == null) {
-						_mvShare.addObject("statusCheckout", "Hiện không có sản phẩm nào trong giỏ hàng!!!");
-					} else {
-						hoadonService.addcthd(cart);
-						_mvShare.addObject("statusCheckout", "Thanh toán thành công!!!");
-					}
-				}
-				_mvShare.setViewName("user/index");
-				session.removeAttribute("cart");
+	@RequestMapping(value = "/checkout", method = RequestMethod.POST)
+	public ModelAndView CheckoutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bill") hoadon bills) {
+		/* try { */
+			int check = hoadonService.addhoadon(bills);
+			if (check > 0) {
+				HashMap<Long, giohang> giohang = (HashMap<Long, giohang>) session.getAttribute("giohang");
+				hoadonService.addcthd(giohang);
+				
 			}
+			session.removeAttribute("giohang");
+			session.removeAttribute("TotalPriceCart");
+			session.removeAttribute("TotalQuantyCart");
+			_mvShare.setViewName("redirect:/success");
+			return _mvShare;
+			/*
+			 * } catch (Exception e) {
+			 * 
+			 * _mvShare.addObject("status","Số lượng mua lớn hơn trong kho!");
+			 * _mvShare.setViewName("user/cart"); return _mvShare; }
+			 */
 		
+
+	}
+	
+	@RequestMapping(value = "/success")
+	public ModelAndView SuccessOrder() {
+		_mvShare.setViewName("user/successOrder");
 		return _mvShare;
-	}*/
+	}
 }

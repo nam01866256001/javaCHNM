@@ -24,7 +24,7 @@
 						class="form-control" id="psw" path="matKhau" />
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control"
+					<input type="text" class="form-control"
 						placeholder="nhập lại mật khẩu *" value="" />
 				</div>
 			</div>

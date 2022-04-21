@@ -26,7 +26,7 @@
                 <!-- Card header -->
                 <div class="card-header border-0">
 
-                    
+                    <a href="/Product/Create" class="btn btn-round btn-primary"><i class="fas fa-plus-circle"></i></a>
                 </div>
              
 
